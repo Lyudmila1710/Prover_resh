@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".MainActivity">
+
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="415dp"
+            android:layout_height="56dp"
+            android:layout_marginTop="4dp"
+            android:gravity="center"
+            android:text="Итого проверено примеров"
+            android:textSize="28dp"
+            app:autoSizeMinTextSize="14dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Итого проверено примеров" />
+
+        <TextView
+            android:id="@+id/all_count"
+            android:layout_width="415dp"
+            android:layout_height="47dp"
+            android:gravity="center"
+            android:text="0"
+            android:textSize="28dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView"
+            tools:text="0" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="414dp"
+            android:layout_height="75dp"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/all_count">
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="75dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="Правильно"
+                android:textSize="20dp"
+                tools:text="Правильно" />
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="wrap_content"
+                android:layout_height="75dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="Неправильно"
+                android:textSize="20dp"
+                tools:text="Неправильно" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout2"
+            android:layout_width="412dp"
+            android:layout_height="55dp"
+            android:layout_marginTop="1dp"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+
+            <TextView
+                android:id="@+id/right"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="0"
+                android:textSize="20dp"
+                tools:text="0" />
+
+            <TextView
+                android:id="@+id/wrong"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="0"
+                android:textSize="20dp"
+                tools:text="0" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/procent"
+            android:layout_width="412dp"
+            android:layout_height="71dp"
+            android:layout_marginTop="120dp"
+            android:gravity="center"
+            android:text="0.00%"
+            android:textSize="44dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
+            tools:text="0.00%" />
+
+        <LinearLayout
+            android:id="@+id/color"
+            android:layout_width="418dp"
+            android:layout_height="42dp"
+            android:layout_marginTop="40dp"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/procent">
+
+            <TextView
+                android:id="@+id/one_number"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="00"
+                android:textSize="28dp"
+                tools:text="00" />
+
+            <TextView
+                android:id="@+id/oper"
+                android:layout_width="35dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="+"
+                android:textSize="28dp"
+                tools:text="+" />
+
+            <TextView
+                android:id="@+id/two_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="00"
+                android:textSize="28dp"
+                tools:text="00" />
+
+            <TextView
+                android:id="@+id/textView11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="="
+                android:textSize="28dp"
+                tools:text="=" />
+
+            <TextView
+                android:id="@+id/result"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="00"
+                android:textSize="28dp"
+                tools:text="00" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/start"
+            android:layout_width="415dp"
+            android:layout_height="53dp"
+            android:layout_marginTop="30dp"
+            android:onClick="onStartButtonClick"
+            android:text="Начать"
+            android:textSize="22dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout4" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout3"
+            android:layout_width="410dp"
+            android:layout_height="22dp"
+            android:layout_marginTop="70dp"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
+
+            <TextView
+                android:id="@+id/textView16"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="Минимум"
+                tools:text="Минимум" />
+
+            <TextView
+                android:id="@+id/textView17"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="Максимум"
+                tools:text="Максимум" />
+
+            <TextView
+                android:id="@+id/textView18"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="Среднее"
+                tools:text="Среднее" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="414dp"
+            android:layout_height="29dp"
+            android:layout_marginTop="1dp"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout3">
+
+            <TextView
+                android:id="@+id/min"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="0"
+                android:textSize="20dp"
+                tools:text="0" />
+
+            <TextView
+                android:id="@+id/max"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="0"
+                android:textSize="20dp"
+                tools:text="0" />
+
+            <TextView
+                android:id="@+id/sred"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="0.00"
+                android:textSize="20dp"
+                tools:text="0.00" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout4"
+            android:layout_width="412dp"
+            android:layout_height="58dp"
+            android:layout_marginTop="30dp"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/color">
+
+            <Button
+                android:id="@+id/right_Btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Правильно" />
+
+            <Button
+                android:id="@+id/wrong_Btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Неправильно" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/time"
+            android:layout_width="414dp"
+            android:layout_height="39dp"
+            android:text="Время(сек)"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
+            tools:text="Время(сек)"
+            android:gravity="center"
+            android:textSize="28dp"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
